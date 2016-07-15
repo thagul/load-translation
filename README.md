@@ -1,5 +1,16 @@
 # Load-translation
 
+
+Demo app to test fetching ember-i18n translations live. Translation file is located into /public/i18n/. 
+Translations are loaded from `translations-fetcher` service (see `beforeModel` in index route).
+
+ember-cli-mirage is disabled in development environment, so json of translations file is rendered directly.
+
+The problem currently is in tests. I would serve real json file, but I need to use mirage mock to make tests faster.
+See `acceptance/index-test` which fails if I comment the mock in `mirage/config`.
+
+
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
